@@ -73,6 +73,7 @@ spec:
       - name: description
         description: A human-readable description for the job
         varType: string
+        defaultValue: null
       - name: time_zone
         description: Specifies the time zone to be used in interpreting schedule
         varType: string
@@ -89,6 +90,7 @@ spec:
               data       = optional(string)
               attributes = optional(map(string), {})
             })
+        defaultValue: null
         connections:
           - source:
               source: github.com/terraform-google-modules/terraform-google-pubsub
@@ -113,6 +115,7 @@ spec:
                 value = string
               }), null)
             })
+        defaultValue: null
       - name: http_target
         description: If the job providers a http_target the cron will send a request to the targeted url
         varType: |-
@@ -129,6 +132,7 @@ spec:
                 audience              = optional(string)
               }))
             })
+        defaultValue: null
     outputs:
       - name: id
         description: An identifier for the resource
